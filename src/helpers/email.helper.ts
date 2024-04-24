@@ -5,7 +5,6 @@ import bcryptjs from "bcryptjs";
 export const sendEmail = async ({ email, emailType, userId }: any) => {
   try {
     // Configure mail for usage
-
     const hashedToken = await bcryptjs.hash(userId.toString(), 10);
 
     if (emailType === "VERIFY") {
